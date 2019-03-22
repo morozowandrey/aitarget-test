@@ -26,8 +26,8 @@ export class BookComponent implements OnInit {
 
   ngOnInit() {
     this.currentRoute = this.route.snapshot.paramMap.get('id');
-    this.createForm();
     this.getBooks();
+    this.createForm();
   }
 
   createForm() {
@@ -50,12 +50,7 @@ export class BookComponent implements OnInit {
         }
       });
 
-      this.bookForm.controls.title.setValue(this.book.title);
-      this.bookForm.controls.description.setValue(this.book.description);
-      this.bookForm.controls.author.setValue(this.book.author);
-      this.bookForm.controls.isbn.setValue(this.book.isbn);
-      this.bookForm.controls.year.setValue(this.book.year);
-      this.bookForm.controls.rating.setValue(this.book.rating);
+      this.bookForm.patchValue(this.book);
     });
   }
 
