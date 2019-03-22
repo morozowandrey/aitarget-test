@@ -1,0 +1,25 @@
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-massage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &__text{
+      font-size: 100px;
+    }
+
+    &__link{
+      font-size: 20px;
+    }
+  }
+
+  &__img{
+    max-height: 100vh;
+  }
+}

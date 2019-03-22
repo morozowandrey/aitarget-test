@@ -1,0 +1,14 @@
+.book-form {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+
+  .btns-box {
+    display: flex;
+    justify-content: space-between;
+
+    &__btn {
+      width: 100px;
+    }
+  }
+}

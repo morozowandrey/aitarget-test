@@ -1,0 +1,7 @@
+<div class="books">
+  <mat-card (click)="bookAction(book.title)" class="books-item" *ngFor="let book of books">
+    <p>{{book.title}}</p>
+    <img class="books-item__img" src="{{book.photoUrl}}" alt="book image">
+    <star-rating [starType]="'svg'" [rating]="book.rating"></star-rating>
+  </mat-card>
+</div>

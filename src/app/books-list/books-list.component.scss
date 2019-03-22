@@ -1,0 +1,23 @@
+.books {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-item {
+    margin: 0 25px 25px 0;
+    width: 250px;
+    text-align: center;
+
+    &__img {
+      width: 200px;
+      max-height: 280px;
+      margin-bottom: 15px;
+    }
+  }
+  &-item:last-of-type {
+    margin-right: 0;
+  }
+  &-item:hover {
+    cursor: pointer;
+  }
+}

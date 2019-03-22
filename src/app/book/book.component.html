@@ -1,0 +1,44 @@
+<form class="book-form" [formGroup]="bookForm">
+
+  <mat-form-field fxFlex="100">
+    <input matInput placeholder="book title" formControlName="title" required>
+    <mat-error>book title is required!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field fxFlex="100">
+    <input matInput placeholder="Author" formControlName="author" required>
+    <mat-error>Author is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field fxFlex="100">
+    <textarea matInput placeholder="Description" formControlName="description" rows="6" required></textarea>
+    <mat-error>Max length 200 symbols!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field fxFlex="100">
+    <input matInput placeholder="ISBN" formControlName="isbn" required>
+    <mat-error>ISBN it is a number</mat-error>
+  </mat-form-field>
+
+  <mat-form-field fxFlex="100">
+    <input matInput placeholder="Year" formControlName="year" required>
+    <mat-error>Year it is a number</mat-error>
+  </mat-form-field>
+
+  <mat-form-field fxFlex="100">
+    <input matInput placeholder="Rating" formControlName="rating">
+    <mat-error *ngIf="bookForm.get('rating').hasError('max')">Max value 5!</mat-error>
+    <mat-error *ngIf="bookForm.get('rating').hasError('pattern')">Rating it is a number</mat-error>
+  </mat-form-field>
+
+  <div class="btns-box">
+    <button (click)="editBook()" mat-raised-button class="btns-box__btn mat-button" aria-label="edit">
+      Edit
+    </button>
+    <button *ngIf="!bookForm.disabled" (click)="saveBook()" mat-raised-button class="btns-box__btn mat-button"
+      aria-label="save" [disabled]="bookForm.invalid">
+      Save
+    </button>
+  </div>
+
+</form>

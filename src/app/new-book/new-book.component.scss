@@ -1,0 +1,20 @@
+.books-form {
+  max-width: 400px;
+  
+  &-item {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    border: 1px solid;
+  }
+
+  .btns-box {
+    display: flex;
+    justify-content: space-between;
+
+    &__btn {
+      width: 100px;
+    }
+  }
+}
